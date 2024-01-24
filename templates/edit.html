@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tarea</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='edit.css') }}">
+
+</head>
+<body>
+    <h1>Editar Tarea</h1>
+
+    <!-- Formulario para editar tarea existente -->
+    <form action="{{ url_for('update', id=task[0]) }}" method="post">
+        <label for="title">Título:</label>
+        <input type="text" name="title" value="{{ task[1] }}" required>
+
+        <label for="description">Descripción:</label>
+        <textarea name="description" required>{{ task[2] }}</textarea>
+
+        <button type="submit">Actualizar Tarea</button>
+    </form>
+</body>
+</html>
