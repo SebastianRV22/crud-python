@@ -1,1 +1,1 @@
-web: gunicorn CRUD-PYTHON_app:app
+web: gunicorn crud-python:app
